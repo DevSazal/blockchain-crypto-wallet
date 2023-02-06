@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-base",
+    "plugin:import/typescript"
+  ],
+  "globals": {
+    "NodeJS": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "no-plusplus": "off",
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+    "@typescript-eslint/no-explicit-any": "error",
+    "import/no-cycle": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never"
+      }
+    ]
+  }
+}
